@@ -38,6 +38,26 @@ Two modes:
 
 Each stage has gate criteria. You can't skip ahead. If you don't have evidence for a claim, it gets flagged as an assumption, not glossed over.
 
+## Quick Start
+
+Run the slash command with your idea:
+
+```
+/validate "AI-powered onboarding tool for mid-market SaaS companies"
+```
+
+The coach starts with intake questions:
+
+> **Coach:** Before we dig in, who has this problem? Are we talking about the SaaS company's internal team, or their customers going through onboarding?
+
+> **You:** Their customers. New users drop off in the first week because the onboarding flow is generic.
+
+> **Coach:** Got it. So the core claim is: personalized onboarding reduces first-week churn for mid-market SaaS. What evidence do you have that this is actually a problem worth solving? Have you talked to anyone, or is this a hunch?
+
+Each stage builds on the last. The coach won't let you skip ahead. If you say "the market is big," it asks how you know. If you don't have evidence, it flags the assumption rather than letting you pretend.
+
+By the end, you get a scored validation report. See [`examples/example-validation.md`](examples/example-validation.md) for a complete output.
+
 ## When to Use It
 
 - Before committing engineering resources to a new idea
@@ -65,12 +85,6 @@ This is a [Claude Code](https://docs.anthropic.com/en/docs/claude-code) skill. R
 
 ```
 /validate "AI-powered onboarding tool for mid-market SaaS companies"
-```
-
-With additional context files:
-
-```
-/validate "AI-powered onboarding tool" --context @interview-notes.md @market-research.md
 ```
 
 Draft mode (autonomous first pass, then collaborative review):
